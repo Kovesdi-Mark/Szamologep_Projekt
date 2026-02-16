@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KovesdiMark\\Szamologep_projekt\\Szamologep\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98FDBBF4-9A5C-4AB4-A15E-899A732A9958}|Szamologep\\Szamologep.csproj|d:\\kovesdimark\\szamologep_projekt\\szamologep\\szamologep\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{98FDBBF4-9A5C-4AB4-A15E-899A732A9958}|Szamologep\\Szamologep.csproj|solutionrelative:szamologep\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98FDBBF4-9A5C-4AB4-A15E-899A732A9958}|Szamologep\\Szamologep.csproj|d:\\kovesdimark\\szamologep_projekt\\szamologep\\szamologep\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98FDBBF4-9A5C-4AB4-A15E-899A732A9958}|Szamologep\\Szamologep.csproj|solutionrelative:szamologep\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\KovesdiMark\\Szamologep_projekt\\Szamologep\\Szamologep\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Szamologep\\MainWindow.xaml",
+              "ToolTip": "D:\\KovesdiMark\\Szamologep_projekt\\Szamologep\\Szamologep\\MainWindow.xaml",
+              "RelativeToolTip": "Szamologep\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-16T07:18:41.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\KovesdiMark\\Szamologep_projekt\\Szamologep\\Szamologep\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Szamologep\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\KovesdiMark\\Szamologep_projekt\\Szamologep\\Szamologep\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Szamologep\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T07:18:39.337Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
