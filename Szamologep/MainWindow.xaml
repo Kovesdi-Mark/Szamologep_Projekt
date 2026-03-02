@@ -1,36 +1,138 @@
 ﻿<Window x:Class="Szamologep.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Szamologep"
-        mc:Ignorable="d"
-        Title="Számológép" Height="450" Width="300">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition x:Name="Results" Height="20*" ></RowDefinition>
-            <RowDefinition x:Name="Buttons" Height="25*"></RowDefinition>
-        </Grid.RowDefinitions>
+        Title="Számológép"
+        Height="500"
+        Width="400">
 
-        <Grid Grid.Row="0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <!-- ===== FŐ ARÁNYOK ===== -->
             <Grid.RowDefinitions>
-                <RowDefinition Height="10*"></RowDefinition>
-                <RowDefinition Height="15*"></RowDefinition>
-                <RowDefinition x:Name="MemoryButtons" Height="10*"></RowDefinition>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="6*"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" x:Name="Operations" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="Gray" FontSize="18">Valami</Label>
+            <!-- ===================== -->
+            <!--        KIJELZŐ        -->
+            <!-- ===================== -->
+            <Grid Grid.Row="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
 
-            <Border Grid.Row="1" Background="Red" x:Name="Result"></Border>
+                <!-- Műveleti sor -->
+                <Viewbox Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Right">
+                    <TextBlock Text="123 + 456" Foreground="Gray" TextAlignment="Right"/>
+                </Viewbox>
 
-            <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="0, 0, 0, 1">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
-                </Grid>
-            </Border>
+                <!-- Eredmény -->
+                <Border Grid.Row="1">
+                    <Viewbox Stretch="Uniform" HorizontalAlignment="Right">
+                        <TextBlock x:Name="ResultText"
+                              Text="579"
+                              Foreground="Black"
+                              TextAlignment="Right"/>
+                    </Viewbox>
+                </Border>
+
+                <!-- Memória sor (üres most) -->
+                <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="0,0,0,1">
+                    <Grid Grid.Row="2" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Felső-->
+                        <Button Grid.Row="0" Grid.Column="0"></Button>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- ===================== -->
+            <!--         GOMBOK        -->
+            <!-- ===================== -->
+            <Grid Grid.Row="1" Margin="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!-- 1. sor -->
+                <Button Grid.Row="0" Grid.Column="0" FontSize="20">
+                    <TextBlock>
+                        2<Run BaselineAlignment="Superscript" Text="nd" FontSize="12"></Run>
+                    </TextBlock>
+                </Button>
+                <Button Grid.Row="0" Grid.Column="1" Content="π" FontSize="20"/>
+                <Button Grid.Row="0" Grid.Column="2" Content="e" FontSize="20"/>
+                <Button Grid.Row="0" Grid.Column="3" Content="CE" FontSize="20"/>
+                <Button Grid.Row="0" Grid.Column="4" Content="DEL" FontSize="20"/>
+
+                <!-- 2. sor -->
+                <Button Grid.Row="1" Grid.Column="0" FontSize="20">
+                    <TextBlock>
+                        x<Run BaselineAlignment="Superscript" Text="2" FontSize="12"></Run>
+                    </TextBlock>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="1" Content="1/x" FontSize="20"/>
+                <Button Grid.Row="1" Grid.Column="2" Content="|x|" FontSize="20"/>
+                <Button Grid.Row="1" Grid.Column="3" Content="exp" FontSize="20"/>
+                <Button Grid.Row="1" Grid.Column="4" Content="mod" FontSize="20"/>
+                
+
+                <!-- 3. sor -->
+                <Button Grid.Row="2" Grid.Column="0" Content="√" FontSize="20"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="(" FontSize="20"/>
+                <Button Grid.Row="2" Grid.Column="2" Content=")" FontSize="20"/>
+                <Button Grid.Row="2" Grid.Column="3" Content="n!" FontSize="20"/>
+                <Button Grid.Row="2" Grid.Column="4" Content="÷" FontSize="20"/>
+
+                <!-- 4. sor -->
+                <Button Grid.Row="3" Grid.Column="0" FontSize="20">
+                    <TextBlock>
+                        x<Run BaselineAlignment="Superscript" Text="y" FontSize="12"></Run>
+                    </TextBlock>
+                </Button>
+                <Button Grid.Row="3" Grid.Column="1" Content="7" FontSize="20"/>
+                <Button Grid.Row="3" Grid.Column="2" Content="8" FontSize="20"/>
+                <Button Grid.Row="3" Grid.Column="3" Content="9" FontSize="20"/>
+                <Button Grid.Row="3" Grid.Column="4" Content="X" FontSize="20"/>
+
+                <!-- 5. sor -->
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" FontSize="20"/>
+                <Button Grid.Row="4" Grid.Column="2" Content="." FontSize="20"/>
+                <Button Grid.Row="4" Grid.Column="3" Content="=" FontSize="20" Background="#0078D7" Foreground="White"/>
+
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>
